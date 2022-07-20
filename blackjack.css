@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/* Complete the CSS styling according to the provided design */
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+    color: white;
+    background:#0D7377;
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: goldenrod;
+}
+p{
+    text-align: center;
+}
+@media(orientation:landscape)
+{
+    #start-game{
+    border-radius: 2em;
+    font-size: 2rem; 
+    border: none;
+    color: white;
+    background-color: goldenrod;
+    margin-left: 540px;
+    width:15%;
+    padding:.7rem;
+    }
+    #start-game:hover,#newcard:hover{
+    box-shadow: 0 5px black;
+
+    }
+    #start-game:active,#newcard:active{
+    box-shadow: 0 5px black;
+    transform:translateY(4px);
+    }
+    #newcard{
+    border-radius: 2em;
+    width:15%;
+    font-size: 2rem; 
+    border: none;
+    color: white;
+    background-color: goldenrod;
+    margin-top: 1.5em;
+    text-align: center;
+    padding:.5em;
+    margin-left: 540px;
+    }
+}
+@media(orientation:portrait)
+{
+    #start-game{
+        border-radius: 2em;
+        font-size: 2rem; 
+        border: none;
+        color: white;
+        background-color: goldenrod;
+        margin-left: 365px;
+        width:25%;
+        padding:.7rem;
+    }
+    #start-game:hover,#newcard:hover{
+        box-shadow: 0 5px black;
+    
+    }
+    #start-game:active,#newcard:active{
+        box-shadow: 0 5px black;
+        transform: translateY(4px);
+    }
+    #newcard{
+        border-radius: 2em;
+        margin-left: 365px;
+        width:25%;
+        font-size: 2rem; 
+        border: none;
+        color: white;
+        background-color: goldenrod;
+        margin-top: 1.5em;
+        text-align: center;
+        padding:.5em;
+       
+    }
+
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="/s.png" type="image/icon type" />
+  <link rel="stylesheet" href="/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shivansh Soni</title>
+</head>
+
+<body>
+  <!-- hero section -->
+  <div class="main1">
+    <div class="intro">
+      <p>WELCOME TO MY PORTFOLIO.</p>
+    </div>
+
+    <div class="main-hero">
+
+      <div class="vanta">
+        <div class="hero" id="hero">
+          <nav>
+            <h2 class="logo">Portfo<span>lio</span></h2>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about" style="transition: .7s ease;">About Me</a></li>
+              <li><a id="ser" href="#service">Services</a></li>
+
+              <li><a class="temp" href="#here">Contact Us</a></li>
+            </ul>
+            <a id="sub" href="https://www.youtube.com/channel/UCh0c2ceNMzTwgHRsom898fg" class="btn">Subsrcribe</a>
+          </nav>
+          <div class="content">
+            <h4>Hello , My Name Is</h4>
+            <h1>Shivansh <span>Soni</span></h1>
+            <h3>Designer | Developer | Photographer</h3>
+            <div class="newsletter">
+              <form>
+                <input type="email" name="email" id="mail" placeholder="Enter Your Email" />
+                <input type="submit" name="submit" value="Lets Start" onclick="save()" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+        <script>
+          VANTA.BIRDS({
+            el: ".vanta",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.0,
+            minWidth: 200.0,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            backgroundColor: 0x121212,
+            quantity: 4.0,
+          });
+        </script>
+      </div>
+
+
+      <section class="about" id="about">
+        <h2>About Me</h2>
+        <h5>Developer <span>& Designer</span></h5>
+        <div class="main">
+          <img src="/me2.jpg" alt="Photo of me" />
+          <div class="about-text">
+            <p>
+              Hello , I am Shivansh Soni currently persuing my
+              <strong>B.tech in Computer Science .</strong> My skills include
+              Desiging & Developing . My Tech Stacks inclued HTML5 , CSS3 , REACTJS , MYSQL , VANILLAJS
+            </p>
+            <button type="button"
+              onclick="window.location.href='https://mail.google.com/mail/?view=cm&fs=1&to=shivanshsoni.indore@gmail.com&su=Hey Shivansh'" />
+            Lets Talk
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+      <div class="service" id="service">
+        <div class="title">
+          <p>Our Services</p>
+        </div>
+        <div class="box">
+          <div class="card">
+            <i class="fas fa-bars"></i>
+            <h5>Designer / Editor</h5>
+            <div class="pra">
+              <p>
+                I know the basics of Adobe illustrator and designed some logos
+                and designs for several festivals and events
+              </p>
+
+              <p style="text-align: center">
+                <button
+                  onclick="window.location.href = 'https://www.youtube.com/playlist?list=PLwj8REeu4M2aGyAX_eWbDZDROTQBpagOt'">
+                  Have A Look </button>
+
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="far fa-user"></i>
+            <h5>Developer</h5>
+            <div class="pra">
+              <p>
+                I've already made some projects too for . All of them are live and can be seen by clicking button below
+                .
+              </p>
+
+              <p style="text-align: center">
+                <button onclick="window.location.href = './project.html'"> Have A Look </button>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <i class="far fa-bell"></i>
+            <h5>Photographer</h5>
+            <div class="pra">
+              <p>
+                Photography is also one of my hobbies , I have more than 3
+                years of eperience in the field of Fashion photography
+              </p>
+
+              <p style="text-align: center">
+                <button onclick="window.location.href = 'https://www.instagram.com/kalakaar_2091/'"> Have A Look
+                </button>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="contact-me" id="here">
+        <p>Let Me Get You a Beautiful Website.</p>
+        <a class="button-two"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=shivanshsoni.indore@gmail.com&su=Hey Shivansh">Hire Me</a>
+      </div>
+
+
+      <footer>
+        <p>Shivansh Soni</p>
+        <div class="social">
+          <a href="https://www.instagram.com/k_se_kalakaar/"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/Shivansh-soni"><i class="fab fa-github"></i></a>
+          <a href="https://discord.gg/kTvppbys"><i class="fab fa-discord"></i></a>
+        </div>
+        <p class="end">CopyRight By Shivansh Soni</p>
+      </footer>
+      
+    </div>
+
+  </div>
+  <script src="/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,915 @@
+:root{
+    --primary:#f9004c;
+    --dark:#161616;
+}    
+html.body{
+    font-size:10px;
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+*{  
+    /* border: 2px solid yellow; */
+    padding: 0;
+    margin:0;
+    font-family: 'Josefin Sans',sans-serif;
+    box-sizing: border-box;
+   
+   
+}
+@media screen and (orientation:portrait) {
+   
+    html, body {
+        margin:0;
+        padding:0;
+        overflow-x: hidden;
+        box-sizing: border-box
+        }
+        
+}
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #121212;  /* fallback for old browsers */
+
+    animation-fill-mode: none;
+    animation-name: example;
+    animation-duration: 3.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes example {
+    0% {
+      height:100vh;
+    }
+
+    100% {
+      height: 0vh;
+      /* opacity: 1; */
+    }
+  }
+
+  .intro > p {
+    position: relative;
+    top: 50%;
+    right: 1%;
+    color: #fff;
+    font-family: 'Sriracha', cursive;
+    /* border:2px solid red; */
+    width: 800px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 1.5s steps(50, end),
+      blink-caret 0.5s step-end infinite,
+      disappear 1.5s ease 2s;
+    animation-fill-mode: forwards;
+
+    
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 18%;
+    }
+  }
+
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: orange;
+    }
+  }
+
+  @keyframes disappear{
+      from{opacity: 1}
+      to{opacity: 0}
+  }
+
+ .main-hero{
+    width: 100%;
+    height: 100vh;
+    /* border:2px solid red; */
+    position:absolute;
+    animation-name: reveal;
+    animation-delay: 2s;
+    animation-duration: 3.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+  @keyframes reveal {
+    from {
+      top: 750px;
+    }
+    to {
+      top: 0px;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width:376px) and (max-width:415px) 
+  {
+        .intro{
+            width:414px;
+
+        }
+        .vanta{
+            width: 414px;
+        }
+        
+      @keyframes example {
+        0% {
+          height:100vh;
+        }
+    
+        100% {
+          height: 0vh;
+          /* opacity: 1; */
+        }
+      }
+
+      
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 65%;
+        }
+      }
+    
+    
+      
+
+    
+
+    }
+  @media (min-width:365px) and (max-width:380px) 
+  {     
+      
+        .intro{
+            width:23.4375rem;
+        }
+        .vanta{
+            width: 375px;
+        }
+        .main1 {
+            width: 412px;
+        }
+        .main-hero{
+            width:420px;
+            animation-delay: 1.75s;
+            animation-duration: 2.5s;
+        }
+        
+
+      @keyframes example {
+        0% {
+          height:100vh;
+        }
+    
+        100% {
+          height: 0vh;
+          /* opacity: 1; */
+        }
+      }
+
+      
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 75%;
+        }
+      }
+    
+    
+      
+
+    
+
+    }
+
+
+/* ---------
+HERO
+------------ */
+.hero{
+    height:100vh;
+    width: 100%;
+    /* background-image: url("main1.png"); */
+    background-size: cover;
+    background-position: center;
+    /* background-color:  #121212; */
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 8% 0 8%;
+}
+.logo{
+    color: white;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+span{color:var(--primary);}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;  
+    padding: 1rem ;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li a:hover{
+    color:var(--primary);
+    transition: .3s;
+}
+
+.btn{
+    background:var(--primary);
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    border-radius: 4rem;
+    transition: transform .4s;
+}
+
+.btn:hover{
+    transform:scale(1.2)
+}
+
+/* ------------
+Media QUERY
+--------------- */
+
+@media screen and (min-width:319px) and (max-width:350px){
+    nav{
+        flex-direction:column;
+    }
+    ul{
+        margin-left: 3em;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .btn{
+        margin-bottom: 2px;
+    }
+    #ser{
+        margin-left: -.5em; 
+    }
+    .temp{
+       margin-left: -1em;
+    }
+    
+}
+@media screen and (min-width:350px) and (max-width:375px){
+    nav{
+        flex-direction:column;
+    }
+    ul{
+        margin-left: 4em;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .btn{
+        margin-bottom: 2px;
+    }
+    #ser{
+        margin-left: -.5em; 
+    }
+    .temp{
+       margin-left: -1em;
+    }
+    
+}
+
+@media screen and (min-width:370px)and (max-width:410px) {
+    nav{
+        flex-direction:column;
+    }
+    ul{
+        
+        margin-left: 1em;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .btn{
+        margin-bottom: 200px;
+    }
+    .temp{
+       margin-left: 5em;
+    }
+}
+@media screen and (min-width:410px) and (max-width:450px) {
+    nav{
+        flex-direction:column;
+    }
+    ul{
+        
+        margin-left: 2em;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    .btn{
+        margin-bottom: 200px;
+    }
+    .temp{
+       margin-left: 5em;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* ---------
+content
+------------ */
+.content{
+    position:absolute;
+    top:50%;
+    left:8%;
+    transform: translateY(-50%);
+}
+h1{
+    color : white;
+    margin: 2rem 0px 1rem;
+    font-size: 75px;
+}
+h3{
+    color:white;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+h4{
+    color:#fcfc;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.newsletter form{
+    width: 22em;
+    max-width: 100%;
+    position: relative;
+}
+.newsletter form input:first-child{
+    display: inline-block;
+    width: 100%;
+    padding:1rem 4rem 1rem 2rem;
+    border:2px solid var(--primary);
+    outline: none;
+    border-radius: 30px;
+}
+.newsletter form input:last-child{
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: .75rem 1.5rem;
+    border-radius: 30px;
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0px 0px 5px #000 ,0px 0px 15px #858585;
+    top: 6px;
+    right: 6px;
+}
+
+/* --------------
+mediaqueries
+----------------- */
+
+@media  screen and (min-width:319px) and (max-width:380px){
+    .newsletter form{
+        max-width:300px;
+    }
+    .newsletter{
+        
+        margin-bottom: 50px;
+        margin-top: -20px;
+    }
+    .content{
+       max-width:250px;
+        margin-top: 9em;
+        margin-left: -1em;
+    }
+    .content h1{
+        
+        width:250px; 
+        font-size: 4em;
+    }
+    .content h4{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width:381px)and (max-width:415px) {
+
+    .content{
+        margin-top : 10rem;   
+        margin-left: -1rem;
+    }
+    .newsletter{
+        max-width: 20em;
+        align-self: center;
+        margin-left: -.5rem;
+    }
+    .newsletter form {
+        margin: .5rem;
+    }
+}
+
+
+
+
+
+
+
+/* ----------
+about
+-------------- */
+
+
+
+
+
+
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: #191919;
+}
+.main img{
+    position: relative;
+    width: 30%;
+    height: auto;
+}
+.about-text{
+    width: 550px;  
+}
+.main{
+    width:1130px;
+    max-width: 95%;
+    margin:0 auto;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about h2{
+    text-align: center;
+    margin-top: -20px;
+    color: white;
+    font-size: 65px;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+}
+.about h5{
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.about-text p{
+    color: #fcfc;
+    letter-spacing: 2px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom:45px; 
+}
+button{
+    background-color: var(--primary);
+    color:white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px ;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: .4s;
+}
+
+/* -------------
+Media Query
+---------------- */
+@media screen and (min-width:768px) {
+    .about h5{
+        margin:0 0 -2em 8.5em;
+    }
+    
+    
+}
+@media screen and (min-width:319px) and (max-width:380px){
+    section{
+        max-width: 375px;
+
+    }
+    .about h2{
+        color: white;
+        font-size: 3rem;
+        margin-top: -55px;
+    }
+    .about h5{
+        color:white;
+        top:122%;
+        left: 15%;
+        font-size:20px;
+        text-align: center;
+        align-self: center;
+        margin-bottom: 20px;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main img{
+        align-content: center;
+        align-self: center;
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .about-text p{
+        text-align: center;
+        margin: auto;
+        max-width: 300px;
+    }
+    .about-text {
+
+        max-width: 375px;
+    }
+    .about-text button{
+        margin:50px 0 0 220px;
+    }
+}
+
+@media screen and (min-width:381px) and (max-width:416px) {
+    .about h2{
+        text-align: center;
+        align-self: center;
+        font-size: 60px;
+        margin:-4rem .5rem 0 .5rem;
+        
+    }
+    
+    .about h5{
+        /* border:2px solid red; */
+        text-align: center; 
+        margin-bottom: 80px;
+    }
+
+    .about-text  p{
+        position: relative;
+        right:15%;
+        /* margin-top:25rem; */
+        margin-left: -500px;
+        
+    }
+    .about-text {
+        max-width:410px;
+    }
+    .main{  
+        margin-top: 20px;
+        flex-direction: column;
+        border:2px
+        }
+    .main img{
+        align-content: center;
+        align-self: center;
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .about-text p{
+        margin-top: 20px;
+        margin-left: 100px;
+        width: 350px;
+        text-align: center;
+    }
+    .about-text button{
+        margin-left:40%;
+        align-self: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------
+SERVICE SECTION
+-------------- */
+
+.service{
+    background: #101010;
+    width: 100%;
+    padding: 100px 0px;
+}
+.title p{
+    color:white;
+    font-size: 4rem;
+    width:1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+.box{
+    /* border:2px solid red; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    align-content: center;
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.card i{
+    font-size:50px ;
+    display: block;
+    margin: 25px 0px;
+    color:var(--primary);
+}
+.card h5{
+    color:white;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+.pra p{
+    color:#fcfc;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+.card  button {
+    background-color: var(--primary);
+    color:white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    width: 13em;
+    font-size: 15px;
+    padding: 12px 28px ;
+    border-radius: 30px;
+    transition: .4s;
+}
+.card button:hover{ 
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: .4s;
+}
+.card button:active{
+    transform:translate(0 , 20px);
+    transition: .8s ease;
+}
+
+
+a{
+    text-decoration: none;
+    color:white;
+}
+/* -----------
+media query
+--------------- */
+
+@media screen and (min-width:319px) and (max-width:370px){
+    .title p{
+        width: 300px;
+        font-size: 3rem;
+        text-align: center;
+        /* margin-left: -405px; */
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:370px) and (max-width:380px){
+
+    .title h2{
+        font-size: 3rem;
+        text-align: center;
+        margin-left: -375px;
+    }
+    .title > p{
+        font-size: 3rem;
+        text-align: center;
+        width:368px;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+
+@media screen and (min-width:376px) and (max-width:415px) {
+    .title p{
+        width:405px;
+        font-size: 3rem;
+        margin-top:-40px;
+        
+    }
+    .box{
+        flex-direction:column;
+    }
+}
+
+
+
+
+/* -----------
+contact me
+-------------- */
+
+.contact-me{
+    width: 100%;
+    height:290px;
+    background: #191919;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-me p{
+    color:white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+
+.contact-me .button-two
+{
+    background-color: var(--primary);
+    color:white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px ;
+    border-radius: 30px;
+    transition: .4s;
+}
+.contact-me .button-two:hover{
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: .4s;
+}
+
+/* ----------------
+Media Query 
+------------------*/
+
+@media screen and (min-width:319px) and (max-width:380px){
+    .contact-me p{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:381px) and (max-width:415px) {
+    .contact-me p{
+        margin-top: 80px;
+        text-align: center;
+    }
+    
+}
+
+/* -------------
+Footer
+---------------- */
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer p:nth-child(1){
+    font-size: 30px;
+    color:white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2){
+    color: white;
+    font-size:17px;
+    width: 500px;
+    text-align:center ;
+    line-height: 26px;
+}
+
+.social{
+    display: flex;
+}
+.social a{
+    width:45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 50% ;
+    margin:22px 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.social a:hover{
+    transform: scale(1.3);
+    transition: .3s;
+}
+.end{
+    position: absolute;
+    color: var(--primary);
+    bottom:35px;
+    font-size: 14px;
+
+}
+
+.toggle-button{
+    position: absolute;
+    top:.7.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height:21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius:10px ;
+}
+
+@media screen and (min-width:319px) and (max-width:380px){
+    footer p{
+        text-align: center;
+    }
+    .social{
+        align-items: center;
+    }
+    .end{
+        text-align: center;
+    }
+}

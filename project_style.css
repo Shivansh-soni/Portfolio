@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h1{
+    color:hsl(193, 100%, 53%);
+    
+    margin-top:25px;
+    text-align: center;
+    
+}
+body{
+    font-family:'Overpass';
+    color: white;
+    background: #121212;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+/* ---------
+Image part
+------------ */
+#blackjack-img,#rating-img,#advice-img,#counter-img,#nft-img , #weather-img{
+    align-items: baseline;
+    width:200px;
+    position: relative;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.block{
+    display:flex;
+    justify-content:space-evenly;
+    perspective: 1000px;
+}
+.blackjack-main,.rating-main,.advice-main,.counter-main , .nft-main , .weather-main{
+    margin-top: 50px;
+    background-color: #1c1b1b;
+    width:230px;
+    height:200px;
+    border-radius:15px;
+}
+
+
+.block2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* ---------
+heading part
+------------ */
+.blackjack-front h2 {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+.advice-front h2  {
+    font-size: 23px;
+    margin-top: 17px;
+    margin-left: 15px;
+}
+.rating-front h2{
+    font-size: 23px;
+    margin-top: 17px;
+    margin-left: 17px;
+
+}
+.counter-front h2{
+    font-size: 23px;
+    margin-top: 17px;
+    margin-left: 17px;
+}
+.nft-front h2{
+    font-size: 23px;
+    margin-top: 8px;
+    margin-left: 30px;
+}
+.weather-front h2{
+    font-size: 23px;
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+
+
+.blackjack-back p,.advice-back p,.rating-back p,.counter-back p , .nft-back p , .weather-back p{
+    color:hsl(193, 100%, 53%);
+    margin-top: 10px;
+    font-size: 21px;
+    width:205px;    
+    font-family: 'Short Stack', cursive;
+    z-index: 1;
+}
+.counter-back p , .nft-back p{
+    margin-left: -10px;
+}
+
+
+
+
+    
+
+
+
+
+
+
+/* ------
+Aanimation
+--------- */
+
+.blackjack-front , .blackjack-back , .advice-front , .advice-back , .counter-front ,.counter-back , .rating-front , .rating-back , .nft-front , .nft-back  , .weather-back , .weather-front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.blackjack-back , .advice-back , .counter-back , .rating-back , .nft-back , .weather-back{
+    background-color: #141414;
+    /* border: 2px solid red; */
+    padding:20px;
+    border-radius: 15px;
+    height:200px;
+    transform: rotateY(180deg); 
+}
+.blackjack-inner , .advice-inner  , .counter-inner , .rating-inner , .nft-inner , .weather-inner{
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.blackjack-main:hover .blackjack-inner  , .advice-main:hover .advice-inner , .rating-main:hover .rating-inner , .counter-main:hover .counter-inner , .nft-main:hover .nft-inner , .weather-main:hover .weather-inner{
+    transform: rotateY(180deg);
+}
+
+/* -------------------
+Responsive PArts Begin
+----------------------*/
+
+
+@media (min-width:359px){
+    .block2{
+        align-items: center;
+        margin-bottom: 70px;
+        flex-direction: column;
+    }
+}
+@media (min-width:358px) and (max-width:416px){
+    body{
+        /* min-width:370px;  */
+    }  
+    .block{
+        align-items: center;
+        flex-direction: column;
+    } 
+    .block2{
+        width: 370px;
+    }
+}
